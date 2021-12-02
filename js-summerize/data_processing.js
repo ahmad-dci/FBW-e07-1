@@ -9,6 +9,8 @@
         // task
         // create an array that contains only the iso2Code values from the items
         // in the dataSet
+        const iso2Codes = dataSet.map(item => item.iso2Code)
+        console.log(iso2Codes);
 
     } catch (error) {
         //console.log('');
