@@ -11,6 +11,10 @@
         // in the dataSet
         const iso2Codes = dataSet.map(item => item.iso2Code)
         console.log(iso2Codes);
+        // create an array that will contain the country name and country iso2Code
+        // for only the countries that they have capitalcity 
+        // with this pattern
+        // [['Aruba', 'AW'], ['Afghanistan', 'AF'], ['Angola', 'AO'], .......]
 
     } catch (error) {
         //console.log('');
