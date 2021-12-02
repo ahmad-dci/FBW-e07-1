@@ -15,7 +15,13 @@
         // for only the countries that they have capitalcity 
         // with this pattern
         // [['Aruba', 'AW'], ['Afghanistan', 'AF'], ['Angola', 'AO'], .......]
-
+        const countries = dataSet.filter(item => item.capitalCity)
+        .map(item => [item.name, item.iso2Code]);
+        // task 
+        // create an array that contains the countries names that contain capitalCity
+        // and the incomeLevel is High income
+        // ['Aruba', 'Andorra', .....]
+        console.log(countries);
     } catch (error) {
         //console.log('');
         console.log('url is not right');
