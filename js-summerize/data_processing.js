@@ -21,7 +21,14 @@
         // create an array that contains the countries names that contain capitalCity
         // and the incomeLevel is High income
         // ['Aruba', 'Andorra', .....]
-        console.log(countries);
+        const richCountries = dataSet.filter(country => country.capitalCity && country.incomeLevel.value === 'High income')
+        .map(country => country.name)
+        console.log(richCountries);
+        // task:
+        // the points on the map that have positive latitude it exist in the north half of the world
+        // create an array that contains only the capital cities that exist on the north half of the world
+        // ['Oranjestad', 'Kabul', .....]
+
     } catch (error) {
         //console.log('');
         console.log('url is not right');
