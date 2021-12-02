@@ -16,19 +16,23 @@
         // with this pattern
         // [['Aruba', 'AW'], ['Afghanistan', 'AF'], ['Angola', 'AO'], .......]
         const countries = dataSet.filter(item => item.capitalCity)
-        .map(item => [item.name, item.iso2Code]);
+            .map(item => [item.name, item.iso2Code]);
         // task 
         // create an array that contains the countries names that contain capitalCity
         // and the incomeLevel is High income
         // ['Aruba', 'Andorra', .....]
         const richCountries = dataSet.filter(country => country.capitalCity && country.incomeLevel.value === 'High income')
-        .map(country => country.name)
-        console.log(richCountries);
+            .map(country => country.name)
+
         // task:
         // the points on the map that have positive latitude it exist in the north half of the world
         // create an array that contains only the capital cities that exist on the north half of the world
         // ['Oranjestad', 'Kabul', .....]
-
+        const southCapitalCities = dataSet.filter(country => country.capitalCity && Number(country.latitude) > 0)
+            .map(country => country.capitalCity);
+        console.log(southCapitalCities);
+        //task:
+        // log the closest capital city from the north pole 
     } catch (error) {
         //console.log('');
         console.log('url is not right');
